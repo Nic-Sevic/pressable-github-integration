@@ -15,5 +15,4 @@ jobs:
       - checkout
       - run:
           name: Send Via SFTP
-          command: lftp sftp://USERNAME:PASSWORD@sftp.pressable.com -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ $
-{dir}; quit"
+          command: lftp sftp://USERNAME:PASSWORD@sftp.pressable.com -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ ${dir}; quit"
